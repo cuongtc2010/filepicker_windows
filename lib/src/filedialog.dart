@@ -119,6 +119,9 @@ abstract class FileDialog {
 
   /// Don't change the current working directory.
   bool isDirectoryFixed = false;
+  
+  /// Multi Select File
+  bool isMultiSelect = false;
 
   /// Add a known folder to the 'Quick Access' list.
   void addPlace(WindowsKnownFolder folder, Place location) {
