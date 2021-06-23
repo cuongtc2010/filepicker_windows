@@ -47,6 +47,9 @@ class OpenFilePicker extends FileDialog {
     if (isDirectoryFixed) {
       options |= FILEOPENDIALOGOPTIONS.FOS_NOCHANGEDIR;
     }
+    if (isMultiSelect) {
+      options |= FILEOPENDIALOGOPTIONS.FOS_ALLOWMULTISELECT;
+    }
     hr = fileDialog.SetOptions(options);
     if (FAILED(hr)) throw WindowsException(hr);
 
